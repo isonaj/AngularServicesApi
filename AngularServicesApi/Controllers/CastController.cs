@@ -30,7 +30,7 @@ namespace AngularServicesApi.Controllers
                     c.Dead
                 });
 
-            return Ok(_cast);
+            return Ok(trimmed);
         }
 
         [HttpGet("{id}")]
