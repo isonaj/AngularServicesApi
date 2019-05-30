@@ -50,16 +50,16 @@ namespace AngularServicesApi.Controllers
 
         static void InitDb()
         {
-            AddChar("Eddard “Ned” Stark", "ned-stark");
+            AddChar("Eddard “Ned” Stark", "eddard-ned-stark");
             AddChar("Robert Baratheon");
             AddChar("Tyrion Lannister");
             AddChar("Cersei Lannister");
             AddChar("Catelyn Stark");
-            AddChar("Jaime Lannister");
-            AddChar("Daenerys Targaryen");
+            AddChar("Jaime Lannister", "jamie-lannister");
+            AddChar("Daenerys Targaryen", "daenarys");
             AddChar("Viserys Targaryen");
-            AddChar("Jon Snow");
-            AddChar("Robb Stark");
+            AddChar("Jon Snow", "john-snow");
+            AddChar("Robb Stark", "robert-stark");
             AddChar("Sansa Stark");
             AddChar("Arya Stark");
             AddChar("Bran Stark");
