@@ -11,7 +11,7 @@ namespace AngularServicesApi.Controllers
     [ApiController]
     public class CastController : ControllerBase
     {
-        static List<Character> _cast = new List<Character>();
+        static List<Character> _cast;
 
         static CastController()
         {
@@ -40,7 +40,7 @@ namespace AngularServicesApi.Controllers
             return Ok(character);
         }
 
-        [HttpPost("{id}")]
+        [HttpPost("{id}/kill")]
         public ActionResult KillCharacter(int id)
         {
             var character = _cast.SingleOrDefault(c => c.Id == id);
@@ -48,8 +48,16 @@ namespace AngularServicesApi.Controllers
             return Ok();
         }
 
+        [HttpPost("reset")]
+        public ActionResult ResetData()
+        {
+            InitDb();
+            return Ok();
+        }
+
         static void InitDb()
         {
+            _cast = new List<Character>();
             AddChar("Eddard “Ned” Stark", "eddard-ned-stark");
             AddChar("Robert Baratheon");
             AddChar("Tyrion Lannister");
